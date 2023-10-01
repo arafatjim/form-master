@@ -9,7 +9,7 @@ const StateFullForm = () => {
           const handleSubmit = e =>{
                     e.preventDefault();
                     if(password.length < 8){
-                              setError('Password Must Be in 8 character or more');
+                              setError('Password must Be in 8 character or more');
                     }
                     else {
                               setError('');
