@@ -1,10 +1,13 @@
+import { useContext } from "react";
 import Brother from "../Brother/Brother";
 import Cousine from "../Cousine/Cousine";
 import Myself from "../MySelf/Myself";
 import Sister from "../Sister/Sister";
+import { moneyContext } from "../GrandPa/GrandPa";
 
 
 const Aunty = () => {
+    const [money, setMoney] = useContext(moneyContext);
           return (
                     <div>
                         <h2>Aunty</h2>  
@@ -15,7 +18,9 @@ const Aunty = () => {
                               <Cousine name={'Rasel'}></Cousine>
                               
                               
-                              </section>    
+                              </section>  
+                              <p>Money :{money}</p> 
+                              <button onClick={() =>setMoney(money + 100) }>Add 100TK</button> 
                     </div>
           );
 };
